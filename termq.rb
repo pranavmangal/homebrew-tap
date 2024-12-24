@@ -5,20 +5,20 @@
 class Termq < Formula
   desc "A simple tool to query LLMs from the terminal."
   homepage "https://github.com/pranavmangal/termq"
-  version "0.2.0"
+  version "0.2.1"
 
   on_macos do
-    on_intel do
-      url "https://github.com/pranavmangal/termq/releases/download/0.2.0/termq_Darwin_x86_64.tar.gz"
-      sha256 "4e382ff70b9b51b0cdeb1e774a533d4d18f1874d3c74a3ed30dda0f4c879ee2f"
+    if Hardware::CPU.intel?
+      url "https://github.com/pranavmangal/termq/releases/download/0.2.1/termq_Darwin_x86_64.tar.gz"
+      sha256 "d86e5ce123b8db4ef2e89b3a15205004e4a5103a10ec6e217e109878fda73467"
 
       def install
         bin.install "tq"
       end
     end
-    on_arm do
-      url "https://github.com/pranavmangal/termq/releases/download/0.2.0/termq_Darwin_arm64.tar.gz"
-      sha256 "39e1ab24a04123b5670f814736d6b9894c609f108c8120b94f324a91426239ab"
+    if Hardware::CPU.arm?
+      url "https://github.com/pranavmangal/termq/releases/download/0.2.1/termq_Darwin_arm64.tar.gz"
+      sha256 "5e7e2536c8813027dd1a4613e18b1134212a20c8f13498ceb9434e914d5c64b8"
 
       def install
         bin.install "tq"
@@ -27,20 +27,20 @@ class Termq < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/pranavmangal/termq/releases/download/0.2.0/termq_Linux_x86_64.tar.gz"
-        sha256 "69d293b36a39cf6a36e06f5e800f1076108fe52fd9839d381d04a21345449756"
+        url "https://github.com/pranavmangal/termq/releases/download/0.2.1/termq_Linux_x86_64.tar.gz"
+        sha256 "2bdbe20ad066b4e970748dae02175d7d57e17fd3c76ee8a99edbcb791d8383c1"
 
         def install
           bin.install "tq"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/pranavmangal/termq/releases/download/0.2.0/termq_Linux_arm64.tar.gz"
-        sha256 "cc812d86ef08b7296d4a1aade3e46d388d78314c5575e117bc56c54af0f7769e"
+        url "https://github.com/pranavmangal/termq/releases/download/0.2.1/termq_Linux_arm64.tar.gz"
+        sha256 "f3d4c48a5fe8e54bf1758ca17bc400f43a232064b48445cc908a226d6b52b1f7"
 
         def install
           bin.install "tq"
