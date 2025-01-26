@@ -5,20 +5,20 @@
 class Termq < Formula
   desc "A simple tool to query LLMs from the terminal."
   homepage "https://github.com/pranavmangal/termq"
-  version "0.2.1"
+  version "0.2.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pranavmangal/termq/releases/download/0.2.1/termq_Darwin_x86_64.tar.gz"
-      sha256 "d86e5ce123b8db4ef2e89b3a15205004e4a5103a10ec6e217e109878fda73467"
+      url "https://github.com/pranavmangal/termq/releases/download/0.2.2/termq_Darwin_x86_64.tar.gz"
+      sha256 "7ad3b101067d979bfc02a12c2653a283ba45e84cb9956748c358c8ce2892308a"
 
       def install
         bin.install "tq"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pranavmangal/termq/releases/download/0.2.1/termq_Darwin_arm64.tar.gz"
-      sha256 "5e7e2536c8813027dd1a4613e18b1134212a20c8f13498ceb9434e914d5c64b8"
+      url "https://github.com/pranavmangal/termq/releases/download/0.2.2/termq_Darwin_arm64.tar.gz"
+      sha256 "074a6beff9eb04ea8ad7ead79eddb6c7223547b1fa89803484b410ae6411d35d"
 
       def install
         bin.install "tq"
@@ -29,8 +29,8 @@ class Termq < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/pranavmangal/termq/releases/download/0.2.1/termq_Linux_x86_64.tar.gz"
-        sha256 "2bdbe20ad066b4e970748dae02175d7d57e17fd3c76ee8a99edbcb791d8383c1"
+        url "https://github.com/pranavmangal/termq/releases/download/0.2.2/termq_Linux_x86_64.tar.gz"
+        sha256 "73f785c54cf488955844d2137a2137617487cdd9936ee18aeca528544743a4af"
 
         def install
           bin.install "tq"
@@ -39,8 +39,8 @@ class Termq < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/pranavmangal/termq/releases/download/0.2.1/termq_Linux_arm64.tar.gz"
-        sha256 "f3d4c48a5fe8e54bf1758ca17bc400f43a232064b48445cc908a226d6b52b1f7"
+        url "https://github.com/pranavmangal/termq/releases/download/0.2.2/termq_Linux_arm64.tar.gz"
+        sha256 "b192619c5b7f7f36aa7e612b117f971c4d2fee32c7ae152de609f64684cbe051"
 
         def install
           bin.install "tq"
