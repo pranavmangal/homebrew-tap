@@ -5,20 +5,20 @@
 class Grabotp < Formula
   desc "A simple tool to fetch recent OTPs from your Gmail account."
   homepage "https://github.com/pranavmangal/grabotp"
-  version "0.1.0"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pranavmangal/grabotp/releases/download/0.1.0/grabotp_Darwin_x86_64.tar.gz"
-      sha256 "009d878dc7dd0fee96adf5ddd7efdb6f9c577160f99e173aab6468d97c2b4c1b"
+      url "https://github.com/pranavmangal/grabotp/releases/download/0.2.0/grabotp_0.2.0_darwin_x86_64.tar.gz"
+      sha256 "8a08a654272b89a7677d503e029b45818c342c372b1a1246420f3e9faef7a191"
 
       def install
         bin.install "grabotp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pranavmangal/grabotp/releases/download/0.1.0/grabotp_Darwin_arm64.tar.gz"
-      sha256 "eaa74c2660c103314466a5e93f7962833c3609ca1b882b4495fddc22fcb49d2c"
+      url "https://github.com/pranavmangal/grabotp/releases/download/0.2.0/grabotp_0.2.0_darwin_arm64.tar.gz"
+      sha256 "dcd7169950788c270a742f8dd4cbf7ab260462514823a561e64bfa41725c9ddd"
 
       def install
         bin.install "grabotp"
@@ -27,16 +27,16 @@ class Grabotp < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/pranavmangal/grabotp/releases/download/0.1.0/grabotp_Linux_x86_64.tar.gz"
-      sha256 "920657bbd99e61e9e54df3aabe18bc5456054cd81e9b55f2d6dbd32a6749b1a9"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/pranavmangal/grabotp/releases/download/0.2.0/grabotp_0.2.0_linux_x86_64.tar.gz"
+      sha256 "8248748d4f24fd4a1b79147f1139e29e887ca419a603c0c4430362f7bb08858a"
       def install
         bin.install "grabotp"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/pranavmangal/grabotp/releases/download/0.1.0/grabotp_Linux_arm64.tar.gz"
-      sha256 "36a118f1f5a4591ec15b35fa4753f1273047d72ca82c6c578fd9ab83835efc14"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/pranavmangal/grabotp/releases/download/0.2.0/grabotp_0.2.0_linux_arm64.tar.gz"
+      sha256 "af91ae85d93d32e3379fe8205d09c1e162dd953586a23f02b009a3f9b6759e82"
       def install
         bin.install "grabotp"
       end
